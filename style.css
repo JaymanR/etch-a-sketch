@@ -1,6 +1,3 @@
-* {
-    border: 1px solid black;
-}
 
 #page-body {
     height: 100vh;
@@ -15,6 +12,7 @@
     width: min(70vw, 70vh);
     height: min(70vw, 70vh);
     aspect-ratio: 1 / 1;
+    border: 2px solid black;
 }
 
 .row {
