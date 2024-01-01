@@ -50,6 +50,11 @@
     background-color: black;
 }
 
+.buttonToggle {
+    background-color: black;
+    color: white;
+}
+
 h1 {
     font-size: 50px;
     margin: 5%;

@@ -21,11 +21,22 @@ function mouseUp() {
   mouseStatus = false;
 }
 
-function getGridSize() {
+function buttonStatus() {
+    const btns = document.querySelectorAll("#grid-size button");
+    btns.forEach((button) => {
+        if (button.classList.contains("buttonToggle")) {
+            button.classList.toggle("buttonToggle");
+        }
+    });
+}
+
+function adjustGridSize() {
   const gridButtons = document.querySelectorAll("#grid-size button");
   gridButtons.forEach((button) => {
     button.addEventListener("click", () => {
       gridSize = +button.textContent.substring(0, 2);
+      buttonStatus();
+      button.classList.toggle("buttonToggle");
       createCanvasGrid(gridSize);
     });
   });
@@ -51,7 +62,12 @@ function createCanvasGrid(gridSize) {
 
 let gridSize = 16;
 
+const clearBtn = document.getElementById("clear-canvas");
+clearBtn.addEventListener('click', () => {
+    createCanvasGrid(gridSize);
+});
+
 window.onload = () => {
-  getGridSize();
+  adjustGridSize();
   createCanvasGrid(gridSize);
 };
