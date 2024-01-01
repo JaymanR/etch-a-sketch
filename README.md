@@ -7,3 +7,6 @@ The default grid size is 16 x 16 tiles, you can adjust the grid size with the bu
 # How it works
 The canvas contains div's created using JS and each div has an eventlistener that changes the background color of the div.
 
+Try it out:
+[Etch-A-Sketch](https://JaymanR.github.io/etch-a-sketch)
+
